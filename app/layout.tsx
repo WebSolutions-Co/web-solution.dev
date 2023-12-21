@@ -1,9 +1,10 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
-import React from 'react';
 import Navigation from './ui/Navigation';
+import RootProviders from './ui/RootProviders';
 
+import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -19,10 +20,14 @@ export interface RootLayoutProps {
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
 	return (
 		<html lang='en'>
-			<body className={`${inter.className} overflow-x-hidden`}>
-				<Navigation />
-				{children}
-			</body>
+			<RootProviders>
+				<body
+					className={`${inter.className} min-h-screen overflow-x-hidden`}
+				>
+					<Navigation />
+					{children}
+				</body>
+			</RootProviders>
 		</html>
 	);
 };

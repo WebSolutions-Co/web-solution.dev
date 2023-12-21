@@ -6,10 +6,10 @@ import DesktopNavigation from './components/DesktopNavigation';
 
 const Navigation = () => {
 	return (
-		<>
+		<div>
 			<MobileNavigation />
 			<DesktopNavigation />
-		</>
+		</div>
 	);
 };
 

@@ -25,12 +25,17 @@ const config: Config = {
 					800: '#008F33',
 					900: '#007F23',
 				},
+				darkBg: 'rgb(26, 26, 26)',
 			},
 			fontSize: {
 				title: '2.8rem',
 			},
+			maxWidth: {
+				content: '1376px',
+			},
 		},
 	},
+	darkMode: 'class',
 	plugins: [],
 };
 export default config;
