@@ -19,8 +19,10 @@ export interface RootLayoutProps {
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
 	return (
 		<html lang='en'>
-			<Navigation />
-			<body className={inter.className}>{children}</body>
+			<body className={`${inter.className} overflow-x-hidden`}>
+				<Navigation />
+				{children}
+			</body>
 		</html>
 	);
 };

@@ -1,6 +1,10 @@
+import Header from './ui/HomePage/Header';
+
 const Home = () => {
 	return (
-		<main className='flex min-h-screen flex-col w-full items-center justify-between p-4'></main>
+		<main className='flex flex-col w-full items-center justify-between px-2'>
+			<Header />
+		</main>
 	);
 };
 
