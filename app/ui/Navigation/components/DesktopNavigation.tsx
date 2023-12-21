@@ -34,7 +34,7 @@ const DesktopNavigation = () => {
 								key={item.label}
 								href={item.url}
 								className={
-									pathname === item.url
+									pathname.includes(item.url)
 										? 'text-green-500'
 										: ''
 								}
