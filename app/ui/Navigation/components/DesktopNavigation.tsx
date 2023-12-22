@@ -10,14 +10,16 @@ import ToggleThemeButton from './ToggleThemeButton';
 
 const DesktopNavigation = () => {
 	const [hoveredItem, setHoveredItem] = useState('');
-	const { isDark, setTheme } = useTheme();
+	const { isDark } = useTheme();
 	const pathname = usePathname();
 
 	return (
 		<div
-			className={`hidden lg:flex w-full left-0 fixed top-0 p-4 ${
-				isDark ? 'dark dark-theme' : 'light-theme'
-			}`}
+			className={`hidden desktop-navigation lg:flex w-full z-50 left-0 fixed top-0 p-4 ${
+				isDark
+					? 'dark dark-theme bg-darkBg bg-opacity-80'
+					: 'light-theme bg-white bg-opacity-80'
+			} border-b-[1px] border-gray-700`}
 		>
 			<div className='flex max-w-content w-full mx-auto justify-between'>
 				<Link href={'/'}>

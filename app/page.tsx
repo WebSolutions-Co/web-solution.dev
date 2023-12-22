@@ -4,7 +4,7 @@ import useTheme from './hooks/useTheme';
 import Header from './ui/HomePage/Header';
 
 const Home = () => {
-	const { isDark, setTheme } = useTheme();
+	const { isDark } = useTheme();
 
 	return (
 		<main
@@ -12,6 +12,9 @@ const Home = () => {
 				isDark ? 'dark-theme dark' : 'light-theme'
 			} flex min-h-screen flex-col w-full items-center justify-between px-2`}
 		>
+			{/* <div className='absolute -left-[10vw] top-64 z-10 w-[25vw]'>
+				<LottieAnimation animation='https://lottie.host/5ffddeea-0137-4619-8829-0a051823b1a5/Mig6sBBJ4i.json' />
+			</div> */}
 			<Header />
 		</main>
 	);

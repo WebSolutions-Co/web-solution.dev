@@ -15,18 +15,18 @@
 	--light-foreground-rgb: 0, 0, 0;
 	--light-background-start-rgb: 255, 255, 255;
 	--light-background-end-rgb: 255, 255, 255;
-	--foreground-rgb: var(--light-foreground-rgb);
-	--background-start-rgb: var(--light-background-start-rgb);
-	--background-end-rgb: var(--light-background-end-rgb);
+	--foreground-rgb: var(--dark-foreground-rgb);
+	--background-start-rgb: var(--dark-background-start-rgb);
+	--background-end-rgb: var(--dark-background-end-rgb);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 	:root {
 		--foreground-rgb: var(--dark-foreground-rgb);
 		--background-start-rgb: var(--dark-background-start-rgb);
 		--background-end-rgb: var(--dark-background-end-rgb);
 	}
-}
+} */
 
 .light-theme {
 	--foreground-rgb: var(--light-foreground-rgb);
@@ -40,6 +40,16 @@
 	--background-end-rgb: var(--dark-background-end-rgb);
 }
 
+body {
+	color: rgb(var(--foreground-rgb));
+	background: linear-gradient(
+			to bottom,
+			transparent,
+			rgb(var(--background-end-rgb))
+		)
+		rgb(var(--background-start-rgb));
+}
+
 main {
 	color: rgb(var(--foreground-rgb));
 	background: linear-gradient(
@@ -48,6 +58,10 @@ main {
 			rgb(var(--background-end-rgb))
 		)
 		rgb(var(--background-start-rgb));
+}
+
+.desktop-navigation {
+	backdrop-filter: saturate(180%) blur(5px);
 }
 
 #switch-theme {

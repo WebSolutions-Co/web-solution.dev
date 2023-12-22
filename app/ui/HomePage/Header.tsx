@@ -1,13 +1,39 @@
 import React from 'react';
+import LottieAnimation from '../animations/LottieAnimation';
 
 const Header = () => {
 	return (
-		<div className='w-full mt-32'>
-			<h1 className='text-6xl font-bold tracking-tighter leading-[4rem] text-center text-emerald-50'>
-				Lifting <span className=' hidden sm:inline'>Your</span>{' '}
-				<span className='sm:text-green-500'>Web</span>{' '}
-				<span className='text-green-500'>Development</span> Standards
-			</h1>
+		<div className='w-full flex items-center flex-col h-screen relative mt-12 md:mt-16 lg:mt-32'>
+			<div className='flex flex-col gap-8 md:gap-12 items-center'>
+				<h1 className='text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tighter leading-[4rem] lg:leading-[7rem] text-center text-gray-800 dark:text-emerald-50'>
+					Lifting <span className=' hidden sm:inline'>Your</span>{' '}
+					<br className='hidden md:block' />
+					<span className='sm:text-green-500'>Web</span>{' '}
+					<span className='text-green-500'>Development</span>
+					<br />
+					Standards
+				</h1>
+				<p className='text-lg sm:text-xl w-full sm:w-5/6 lg:w-full md:text-2xl font-semibold text-center text-black dark:text-white'>
+					Ambitious software company providing modern and innovative
+					solutions
+					<br />
+					for all your web development problems.
+				</p>
+				<div className='flex gap-4 items-center z-20'>
+					<button className='bg-green-500 h-12 w-36 font-semibold text-lg text-white rounded-md hover:bg-green-400 transition-all active:scale-95'>
+						Start project
+					</button>
+					<button className='bg-gray-700 dark:bg-gray-700 h-12 w-36 font-semibold dark:border-2 dark:border-gray-600 text-lg text-white  rounded-md transition-all active:scale-95 hover:bg-gray-600'>
+						Hire a dev
+					</button>
+				</div>
+			</div>
+			<div className='w-[50vh] -translate-y-8 sm:-translate-y-12'>
+				<LottieAnimation animation='https://lottie.host/78794e14-1d31-4291-b3df-dced424cda5d/IGxE4TKb7x.json' />
+			</div>
+			<div className='absolute w-full bottom-40 md:bottom-40 left-0 hidden md:flex justify-center'>
+				<div className='w-[36px] animate-mouseMoveDown h-[60px] border-[1px] rounded-[18px] dark:border-white border-gray-800 relative after:h-[5px] after:w-[5px] after:block after:bg-black dark:after:bg-white opacity-50 after:animate-mouseScrollDown after:left-[15px] after:absolute after:rounded-full' />
+			</div>
 		</div>
 	);
 };

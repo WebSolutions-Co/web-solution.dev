@@ -33,6 +33,26 @@ const config: Config = {
 			maxWidth: {
 				content: '1376px',
 			},
+			animation: {
+				mouseMoveDown:
+					'moveDown 3s infinite cubic-bezier(0.4, 0, 0.2, 1)',
+				mouseScrollDown:
+					'scrollDown 3s infinite cubic-bezier(0.4, 0, 0.2, 1)',
+			},
+			keyframes: {
+				moveDown: {
+					'0%': { top: '0' },
+					'70%': { top: '10px' },
+					'90%': { top: '0' },
+					'100%': { top: '0' },
+				},
+				scrollDown: {
+					'0%': { top: '18px', opacity: '1' },
+					'70%': { top: '54px', opacity: '0' },
+					'90%': { top: '18px', opacity: '0' },
+					'100%': { top: '18px', opacity: '1' },
+				},
+			},
 		},
 	},
 	darkMode: 'class',
