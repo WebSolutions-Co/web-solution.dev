@@ -3,7 +3,12 @@ import LottieAnimation from '../animations/LottieAnimation';
 
 const Header = () => {
 	return (
-		<div className='w-full flex items-center flex-col h-screen relative mt-12 md:mt-16 lg:mt-32'>
+		<div
+			className='w-full flex items-center flex-col relative mt-[70px] pt-14'
+			style={{
+				height: 'calc(100vh-70px)',
+			}}
+		>
 			<div className='flex flex-col gap-8 md:gap-12 items-center'>
 				<h1 className='text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tighter leading-[4rem] lg:leading-[7rem] text-center text-gray-800 dark:text-emerald-50'>
 					Lifting <span className=' hidden sm:inline'>Your</span>{' '}
@@ -21,17 +26,17 @@ const Header = () => {
 				</p>
 				<div className='flex gap-4 items-center z-20'>
 					<button className='bg-green-500 h-12 w-36 font-semibold text-lg text-white rounded-md hover:bg-green-400 transition-all active:scale-95'>
-						Start project
+						Start Project
 					</button>
 					<button className='bg-gray-700 dark:bg-gray-700 h-12 w-36 font-semibold dark:border-2 dark:border-gray-600 text-lg text-white  rounded-md transition-all active:scale-95 hover:bg-gray-600'>
-						Hire a dev
+						Hire a Dev
 					</button>
 				</div>
 			</div>
 			<div className='w-[50vh] -translate-y-8 sm:-translate-y-12'>
 				<LottieAnimation animation='https://lottie.host/78794e14-1d31-4291-b3df-dced424cda5d/IGxE4TKb7x.json' />
 			</div>
-			<div className='absolute w-full bottom-40 md:bottom-40 left-0 hidden md:flex justify-center'>
+			<div className='absolute w-full bottom-20 left-0 hidden md:flex justify-center'>
 				<div className='w-[36px] animate-mouseMoveDown h-[60px] border-[1px] rounded-[18px] dark:border-white border-gray-800 relative after:h-[5px] after:w-[5px] after:block after:bg-black dark:after:bg-white opacity-50 after:animate-mouseScrollDown after:left-[15px] after:absolute after:rounded-full' />
 			</div>
 		</div>

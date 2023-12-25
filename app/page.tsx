@@ -1,6 +1,7 @@
 'use client';
 
 import useTheme from './hooks/useTheme';
+import BuildProjects from './ui/HomePage/BuildProjects';
 import Header from './ui/HomePage/Header';
 
 const Home = () => {
@@ -15,7 +16,10 @@ const Home = () => {
 			{/* <div className='absolute -left-[10vw] top-64 z-10 w-[25vw]'>
 				<LottieAnimation animation='https://lottie.host/5ffddeea-0137-4619-8829-0a051823b1a5/Mig6sBBJ4i.json' />
 			</div> */}
-			<Header />
+			<div className='max-w-content w-full'>
+				<Header />
+				<BuildProjects />
+			</div>
 		</main>
 	);
 };
