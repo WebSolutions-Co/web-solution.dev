@@ -23,7 +23,7 @@ export const sharedMetadataOpenGraph: Metadata['openGraph'] = {
 	emails: ['zunec.jan@gmail.com'],
 	images: [
 		{
-			url: '/public/banner-image.png',
+			url: '/public/logos/logo.svg',
 		},
 	],
 };

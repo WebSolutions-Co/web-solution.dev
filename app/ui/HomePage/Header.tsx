@@ -20,11 +20,11 @@ const Header = () => {
 					for all your web development problems.
 				</p>
 				<div className='flex gap-4 items-center z-20'>
-					<button className='bg-green-500 h-12 w-36 font-semibold text-lg text-white rounded-md hover:bg-green-400 transition-all active:scale-95'>
-						Start Project
+					<button className='bg-green-500 h-12 w-44 font-semibold text-lg text-white rounded-md hover:bg-green-400 transition-all active:scale-95'>
+						Start a Project
 					</button>
-					<button className='bg-gray-700 dark:bg-dark-600 h-12 w-36 font-semibold dark:border-2 dark:border-dark-500 text-lg text-white  rounded-md transition-all active:scale-95 hover:bg-dark-500'>
-						Hire a Dev
+					<button className='bg-gray-700 dark:bg-dark-600 h-12 w-44 font-semibold dark:border-2 dark:border-dark-500 text-lg text-white  rounded-md transition-all active:scale-95 hover:bg-dark-500'>
+						Hire Developers
 					</button>
 				</div>
 			</div>

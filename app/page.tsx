@@ -1,6 +1,7 @@
 'use client';
 
 import useTheme from './hooks/useTheme';
+import ContactForm from './ui/Forms/Contact';
 import Build from './ui/HomePage/Build';
 import Header from './ui/HomePage/Header';
 import Hire from './ui/HomePage/Hire';
@@ -23,6 +24,7 @@ const Home = () => {
 					<Build />
 					<Hire />
 				</div>
+				<ContactForm />
 			</div>
 		</main>
 	);

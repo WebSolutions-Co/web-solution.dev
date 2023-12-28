@@ -10,7 +10,7 @@ const useIntersectionObserver = () => {
 			([entry]) => {
 				setIsIntersecting(entry.isIntersecting);
 			},
-			{ rootMargin: '0px', threshold: 0.5 }
+			{ rootMargin: '0px', threshold: 0.1 }
 		);
 		observer.observe(ref.current);
 

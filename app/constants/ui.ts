@@ -1,5 +1,5 @@
 export const NAVIGATION_ITEMS = [
-	{ label: 'About', url: '/about' },
+	{ label: 'Hire', url: '/hire' },
 	{ label: 'Projects', url: '/projects' },
 	{ label: 'Contact', url: '/contact' },
 ];
