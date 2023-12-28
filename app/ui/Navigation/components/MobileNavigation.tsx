@@ -14,7 +14,7 @@ const MobileNavigation = () => {
 	const { isDark } = useTheme();
 
 	const navigationItemClassName =
-		'flex w-56 h-10 items-center bg-green-500 hover:bg-opacity-90 py-2 text-white font-semibold duration-200 transition-transform transform-gpu after:absolute after:top-0 after:-left-[40px] after:border-[20px] hover:after:opacity-90 after:border-b-transparent after:border-l-transparent after:z-20 after:border-solid after:border-green-500';
+		'flex w-56 h-10 items-center bg-green-500 hover:bg-green-600 py-2 text-white font-semibold duration-200 transition-transform transform-gpu after:absolute after:top-0 after:-left-[40px] after:border-[20px] hover:after:opacity-90 after:border-b-transparent after:border-l-transparent after:z-20 after:border-solid after:border-green-500';
 
 	return (
 		<div
@@ -64,7 +64,7 @@ const MobileNavigation = () => {
 						/>
 					</div>
 					<div
-						className='bg-green-500 cursor-pointer group-hover:opacity-90 absolute left-0 top-0 translate-x-2 -translate-y-24 h-36 w-36 rotate-45'
+						className='bg-green-500 cursor-pointer group-hover:bg-green-600 absolute left-0 top-0 translate-x-2 -translate-y-24 h-36 w-36 rotate-45'
 						onClick={() => setOpen(!open)}
 					/>
 				</div>
