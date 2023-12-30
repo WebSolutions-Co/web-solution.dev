@@ -5,13 +5,20 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import Card from './components/Card';
 import CardLink from './components/CardLink';
 
+let hasInit = false;
+
 const Build = () => {
 	const { ref: intersectionRef, isIntersecting } = useIntersectionObserver();
 	const animationRef = useRef<Player>(null);
 
-	useEffect(() => {
+	const triggerAnimation = () => {
 		if (isIntersecting) {
 			animationRef.current?.play();
+			return;
+		}
+
+		if (!hasInit) {
+			hasInit = true;
 			return;
 		}
 
@@ -19,6 +26,10 @@ const Build = () => {
 		setTimeout(() => {
 			animationRef.current?.stop();
 		}, 300);
+	};
+
+	useEffect(() => {
+		triggerAnimation();
 	}, [isIntersecting]);
 
 	return (
@@ -40,7 +51,7 @@ const Build = () => {
 			</div>
 			<div
 				ref={intersectionRef}
-				className={`w-full md:absolute md:-right-48 md:bottom-4 md:w-[600px] overflow-hidden transition-all duration-300 ${
+				className={`w-full md:absolute md:-right-48 bottom-2 xl:bottom-4 md:w-[600px] overflow-hidden transition-all duration-300 ${
 					isIntersecting
 						? 'translate-y-0 md:translate-x-0'
 						: 'translate-y-16 md:translate-x-[100px]'

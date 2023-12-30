@@ -20,7 +20,7 @@ const Home = () => {
 			</div> */}
 			<div className='max-w-content w-full'>
 				<Header />
-				<div className='w-full gap-4 justify-center items-center flex flex-col xl:flex-row '>
+				<div className='w-full mt-0 xl:mt-8 gap-4 justify-center items-center flex flex-col xl:flex-row '>
 					<Build />
 					<Hire />
 				</div>

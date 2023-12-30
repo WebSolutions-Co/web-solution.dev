@@ -30,7 +30,7 @@ const Hire = () => {
 				<p className='text-lg'>
 					Choose from a wide range of expert developers. We ensure the
 					quality of our developers by choosing only the best
-					developers from across the world.
+					developers we can find.
 				</p>
 				<p className='text-lg'>
 					Hiring developers has never been easier. Let us know who you

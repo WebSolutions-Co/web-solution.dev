@@ -1,18 +1,88 @@
 import React from 'react';
+import Input from '../../Inputs';
+import useContactInfo from './hooks/useContactInfo';
+import {
+	setContactCompanyName,
+	setContactEmail,
+	setContactMessage,
+	setContactName,
+	setContactPhoneNumber,
+	setContactSubject,
+} from '@/app/state/reducers/contact';
+import TextArea from '../../Inputs/TextArea';
 
 const ContactForm = () => {
+	const {
+		name,
+		companyName,
+		email,
+		phoneNumber,
+		subject,
+		message,
+		onChange,
+		onSubmit,
+	} = useContactInfo();
+
 	return (
-		<div className='w-full flex flex-col justify-center items-center mt-36'>
-			<div className='text-center'>
+		<div className='w-full flex flex-col gap-12 justify-center items-center mt-20 mb-32'>
+			<div className='text-center gap-2 flex flex-col'>
 				<h3 className='text-3xl font-semibold'>
 					Drop us an <span className='text-green-500'>Email</span>
 				</h3>
 				<p>
-					Need solutions or got any questions? Shoot us an email and
-					we'll see how we can assist you!
+					Got any problems that need solving? Shoot us an email and
+					we'll assist you!
 				</p>
 			</div>
-			<div></div>
+			<div className='w-full lg:w-3/4  gap-12 items-center flex flex-col'>
+				<div className='flex flex-col lg:flex-row justify-between lg:gap-4 gap-12 items-center w-full'>
+					<Input
+						value={name}
+						onChange={(e) => onChange(e, setContactName)}
+						width='w-full lg:w-1/2'
+						placeholder='Full Name'
+					/>
+					<Input
+						value={companyName}
+						onChange={(e) => onChange(e, setContactCompanyName)}
+						width='w-full lg:w-1/2'
+						placeholder='Company Name'
+						optional
+					/>
+				</div>
+				<div className='flex flex-col lg:flex-row justify-between lg:gap-4 gap-12 items-center w-full'>
+					<Input
+						value={email}
+						onChange={(e) => onChange(e, setContactEmail)}
+						width='w-full lg:w-1/2'
+						placeholder='Email'
+						type='email'
+					/>
+					<Input
+						value={phoneNumber}
+						onChange={(e) => onChange(e, setContactPhoneNumber)}
+						width='w-full lg:w-1/2'
+						placeholder='Phone Number'
+						optional
+					/>
+				</div>
+				<Input
+					value={subject}
+					onChange={(e) => onChange(e, setContactSubject)}
+					placeholder='Subject'
+				/>
+				<TextArea
+					value={message}
+					placeholder='Message'
+					onChange={(e) => onChange(e, setContactMessage)}
+				/>
+			</div>
+			<button
+				className='text-xl bg-green-500 font-semibold rounded-md w-44 h-12'
+				onClick={onSubmit}
+			>
+				Send
+			</button>
 		</div>
 	);
 };
