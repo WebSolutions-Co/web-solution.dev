@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import LottieAnimation from '../animations/LottieAnimation';
 import useIntersectionObserver from '@/app/hooks/useIntersectionObserver';
 import { Player } from '@lottiefiles/react-lottie-player';
@@ -11,7 +11,7 @@ const Build = () => {
 	const { ref: intersectionRef, isIntersecting } = useIntersectionObserver();
 	const animationRef = useRef<Player>(null);
 
-	const triggerAnimation = () => {
+	useEffect(() => {
 		if (isIntersecting) {
 			animationRef.current?.play();
 			return;
@@ -26,10 +26,6 @@ const Build = () => {
 		setTimeout(() => {
 			animationRef.current?.stop();
 		}, 300);
-	};
-
-	useEffect(() => {
-		triggerAnimation();
 	}, [isIntersecting]);
 
 	return (

@@ -1,4 +1,3 @@
-import { ContactFormData } from '@/app/types/contact';
 import { NextRequest, NextResponse } from 'next/server';
 const nodemailer = require('nodemailer');
 

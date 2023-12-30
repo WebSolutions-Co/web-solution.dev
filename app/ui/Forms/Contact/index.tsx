@@ -31,7 +31,7 @@ const ContactForm = () => {
 				</h3>
 				<p>
 					Got any problems that need solving? Shoot us an email and
-					we'll assist you!
+					we&apos;ll assist you!
 				</p>
 			</div>
 			<div className='w-full lg:w-3/4  gap-12 items-center flex flex-col'>
