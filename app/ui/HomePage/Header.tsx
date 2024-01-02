@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+import Image from 'next/image';
 import LottieAnimation from '../animations/LottieAnimation';
+import FallbackImage from '@/public/preview-header-img.svg';
 
 const Header = () => {
 	return (
-		<div className='w-full flex h-auto items-center flex-col relative mt-10 md:mt-[118px]'>
+		<div className='w-full flex h-auto items-center flex-col relative pt-10 md:pt-[118px]'>
 			<div className='flex flex-col gap-8 md:gap-10 items-center'>
 				<h1 className='text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tighter leading-[4rem] lg:leading-[6rem] text-center text-gray-800 dark:text-emerald-50'>
 					Lifting <span className=' hidden sm:inline'>Your</span>{' '}
@@ -28,10 +30,19 @@ const Header = () => {
 					</button>
 				</div>
 			</div>
-			<div className='w-[50vh] h-[50vh] lg:h-auto max-h-[550px] overflow-hidden lg:w-1/2 -translate-y-12 md:-translate-y-20 lg:-translate-y-16 xl:-translate-y-20'>
-				<LottieAnimation animation='https://lottie.host/78794e14-1d31-4291-b3df-dced424cda5d/IGxE4TKb7x.json' />
+			<div className='w-[50vh] min-w-[50vh] h-[50vh] min-h-[50vh] lg:h-auto max-h-[550px] overflow-hidden lg:w-1/2 -translate-y-12 md:-translate-y-20 lg:-translate-y-16 xl:-translate-y-20'>
+				<LottieAnimation
+					animation='https://lottie.host/78794e14-1d31-4291-b3df-dced424cda5d/IGxE4TKb7x.json'
+					fallback={
+						<Image
+							src={FallbackImage}
+							alt='Animation fallback image'
+							className='h-full w-full'
+						/>
+					}
+				/>
 			</div>
-			<div className='absolute w-full bottom-12 lg:bottom-20 xl:bottom-0 left-0 flex justify-center'>
+			<div className='absolute w-full bottom-12 lg:bottom-20 xl:bottom-6 left-0 flex justify-center'>
 				<div className='w-[36px] animate-mouseMoveDown h-[60px] border-[1px] rounded-[18px] dark:border-white border-gray-800 relative after:h-[5px] after:w-[5px] after:block after:bg-black dark:after:bg-white opacity-50 after:animate-mouseScrollDown after:left-[15px] after:absolute after:rounded-full' />
 			</div>
 		</div>

@@ -51,6 +51,7 @@ const config: Config = {
 					700: '#232323',
 					750: '#191919',
 					800: '#131313',
+					850: '#0d0d0d',
 					900: '#030303',
 				},
 				darkBg: 'rgb(26, 26, 26)',
@@ -60,6 +61,11 @@ const config: Config = {
 			},
 			maxWidth: {
 				content: '1376px',
+			},
+			boxShadow: {
+				side: '20px -120px 90px 4px #00BF6333, -20px -120px 90px 4px #00BF6333',
+				left: '-20px 0px 40px 4px #00BF6333',
+				right: '20px 0px 40px 4px #00BF6333',
 			},
 			animation: {
 				mouseMoveDown:

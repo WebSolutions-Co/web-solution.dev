@@ -78,7 +78,7 @@ const ContactForm = () => {
 				/>
 			</div>
 			<button
-				className='text-xl bg-green-500 font-semibold rounded-md w-44 h-12'
+				className='text-xl bg-green-500 text-white font-semibold rounded-md w-44 h-12'
 				onClick={onSubmit}
 			>
 				Send

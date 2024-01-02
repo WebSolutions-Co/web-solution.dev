@@ -1,9 +1,11 @@
-import React, { useCallback, useEffect, useRef } from 'react';
+import React, { Suspense, useCallback, useEffect, useRef } from 'react';
 import LottieAnimation from '../animations/LottieAnimation';
 import useIntersectionObserver from '@/app/hooks/useIntersectionObserver';
 import { Player } from '@lottiefiles/react-lottie-player';
 import Card from './components/Card';
 import CardLink from './components/CardLink';
+import FallbackImage from '@/public/preview-header-img.svg';
+import Image from 'next/image';
 
 let hasInit = false;
 
@@ -11,26 +13,26 @@ const Build = () => {
 	const { ref: intersectionRef, isIntersecting } = useIntersectionObserver();
 	const animationRef = useRef<Player>(null);
 
-	useEffect(() => {
-		if (isIntersecting) {
-			animationRef.current?.play();
-			return;
-		}
+	// useEffect(() => {
+	// 	if (isIntersecting) {
+	// 		animationRef.current?.play();
+	// 		return;
+	// 	}
 
-		if (!hasInit) {
-			hasInit = true;
-			return;
-		}
+	// 	if (!hasInit) {
+	// 		hasInit = true;
+	// 		return;
+	// 	}
 
-		animationRef.current?.pause();
-		setTimeout(() => {
-			animationRef.current?.stop();
-		}, 300);
-	}, [isIntersecting]);
+	// 	animationRef.current?.pause();
+	// 	setTimeout(() => {
+	// 		animationRef.current?.stop();
+	// 	}, 300);
+	// }, [isIntersecting]);
 
 	return (
 		<Card>
-			<div className='w-full md:w-1/2 text-center md:text-left flex flex-col z-10 gap-4'>
+			<div className='w-full md:w-1/2 text-center md:text-left flex flex-col z-10 gap-4 '>
 				<h2 className='text-3xl font-bold'>
 					<span className='text-green-500'>Build</span> a Project
 				</h2>
@@ -58,8 +60,15 @@ const Build = () => {
 			>
 				<LottieAnimation
 					animation='https://lottie.host/c7e9fccd-20dc-4ebc-8754-45895daeae1f/0AEQqDxnLx.json'
-					loop={false}
+					// loop={false}
 					animationRef={animationRef}
+					fallback={
+						<Image
+							src={FallbackImage}
+							alt='Animation fallback image'
+							className='h-full w-full'
+						/>
+					}
 				/>
 			</div>
 			{/* <div className='bg-gradient-green absolute left-0 bottom-0 w-full h-full opacity-0 transition-all group-hover:opacity-100 -z-10' /> */}

@@ -17,9 +17,9 @@ const DesktopNavigation = () => {
 		<div
 			className={`hidden desktop-navigation lg:flex w-full z-50 left-0 fixed top-0 p-4 ${
 				isDark
-					? 'dark dark-theme bg-darkBg bg-opacity-80'
-					: 'light-theme bg-white bg-opacity-80'
-			} border-b-[1px] border-gray-700`}
+					? 'dark dark-theme bg-darkBg bg-opacity-80 border-gray-700'
+					: 'light-theme bg-white bg-opacity-80 border-light-300'
+			} border-b-[1px] `}
 		>
 			<div className='flex max-w-content w-full mx-auto justify-between'>
 				<Link href={'/'}>
@@ -54,7 +54,7 @@ const DesktopNavigation = () => {
 							</Link>
 						</div>
 					))}
-					<div className='w-px h-8 bg-gray-900 dark:bg-white' />
+					<div className='w-px h-8 bg-light-300 dark:bg-dark-600' />
 					<ToggleThemeButton />
 				</div>
 			</div>

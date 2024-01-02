@@ -5,6 +5,7 @@ import Navigation from './ui/Navigation';
 import RootProviders from './ui/RootProviders';
 
 import './globals.css';
+import Footer from './ui/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
