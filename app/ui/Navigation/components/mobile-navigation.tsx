@@ -7,7 +7,7 @@ import useTheme from '@/app/hooks/useTheme';
 import { NAVIGATION_ITEMS } from '@/app/constants/ui';
 import LogoWhite from '@/public/logos/white-horizontal.svg';
 import LogoBlack from '@/public/logos/black-horizontal.svg';
-import ToggleThemeButton from './ToggleThemeButton';
+import ToggleThemeButton from './theme-button';
 
 const MobileNavigation = () => {
 	const [open, setOpen] = useState(false);

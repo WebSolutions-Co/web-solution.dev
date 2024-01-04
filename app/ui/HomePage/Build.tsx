@@ -1,41 +1,23 @@
-import React, { Suspense, useCallback, useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
+import Image from 'next/image';
+import { Player } from '@lottiefiles/react-lottie-player';
 import LottieAnimation from '../animations/LottieAnimation';
 import useIntersectionObserver from '@/app/hooks/useIntersectionObserver';
-import { Player } from '@lottiefiles/react-lottie-player';
 import Card from './components/Card';
 import CardLink from './components/CardLink';
-import FallbackImage from '@/public/preview-header-img.svg';
-import Image from 'next/image';
-
-let hasInit = false;
+import FallbackImage from '@/public/animation-fallbacks/preview-build.svg';
+import SubHeading from '../sub-heading';
 
 const Build = () => {
 	const { ref: intersectionRef, isIntersecting } = useIntersectionObserver();
 	const animationRef = useRef<Player>(null);
 
-	// useEffect(() => {
-	// 	if (isIntersecting) {
-	// 		animationRef.current?.play();
-	// 		return;
-	// 	}
-
-	// 	if (!hasInit) {
-	// 		hasInit = true;
-	// 		return;
-	// 	}
-
-	// 	animationRef.current?.pause();
-	// 	setTimeout(() => {
-	// 		animationRef.current?.stop();
-	// 	}, 300);
-	// }, [isIntersecting]);
-
 	return (
 		<Card>
 			<div className='w-full md:w-1/2 text-center md:text-left flex flex-col z-10 gap-4 '>
-				<h2 className='text-3xl font-bold'>
+				<SubHeading>
 					<span className='text-green-500'>Build</span> a Project
-				</h2>
+				</SubHeading>
 				<p className='text-lg'>
 					Bring your most innovative project ideas to life. Our team,
 					full of expert developers, which understand how to build
@@ -49,7 +31,7 @@ const Build = () => {
 			</div>
 			<div
 				ref={intersectionRef}
-				className={`w-full md:absolute md:-right-48 bottom-2 xl:bottom-4 md:w-[600px] overflow-hidden transition-all duration-300 ${
+				className={`w-full hidden md:block md:absolute md:-right-48 bottom-2 xl:bottom-4 md:w-[600px] overflow-hidden transition-all duration-300 ${
 					isIntersecting
 						? 'translate-y-0 md:translate-x-0'
 						: 'translate-y-16 md:translate-x-[100px]'

@@ -2,10 +2,11 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Navigation from './ui/Navigation';
-import RootProviders from './ui/RootProviders';
+import RootProviders from './ui/root-providers';
 
 import './globals.css';
 import Footer from './ui/Footer';
+import { BackgroundBeams } from './ui/background-beams';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
 				<body
 					className={`${inter.className} min-h-screen overflow-x-hidden`}
 				>
+					<BackgroundBeams />
 					<Navigation />
 					{children}
 				</body>

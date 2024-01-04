@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import MobileNavigation from './components/MobileNavigation';
-import DesktopNavigation from './components/DesktopNavigation';
+import MobileNavigation from './components/mobile-navigation';
+import DesktopNavigation from './components/desktop-navigation';
 
 const Navigation = () => {
 	return (

@@ -121,7 +121,7 @@ main {
 	transition: transform 0ms linear 100ms, opacity 100ms linear;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1490px) {
 	#switch-theme::after {
 		right: 0;
 		top: 110%;

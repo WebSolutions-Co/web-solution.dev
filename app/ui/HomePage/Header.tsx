@@ -1,11 +1,12 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import LottieAnimation from '../animations/LottieAnimation';
-import FallbackImage from '@/public/preview-header-img.svg';
+import FallbackImage from '@/public/animation-fallbacks/preview-header.svg';
+import { TextGenerateEffect } from '../text-generate-effect';
 
 const Header = () => {
 	return (
-		<div className='w-full flex h-auto items-center flex-col relative pt-10 md:pt-[118px]'>
+		<div className='w-full max-w-content flex h-auto items-center flex-col relative pt-10 px-4 xl:px-0 md:pt-[118px]'>
 			<div className='flex flex-col gap-8 md:gap-10 items-center'>
 				<h1 className='text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tighter leading-[4rem] lg:leading-[6rem] text-center text-gray-800 dark:text-emerald-50'>
 					Lifting <span className=' hidden sm:inline'>Your</span>{' '}
@@ -15,12 +16,10 @@ const Header = () => {
 					<br />
 					Standards
 				</h1>
-				<p className='text-lg sm:text-xl w-full sm:w-5/6 lg:w-full md:text-2xl font-semibold text-center text-black dark:text-white'>
-					Ambitious software company providing modern and innovative
-					solutions
-					<br />
-					for all your web development problems.
-				</p>
+				<TextGenerateEffect
+					words='Web development agency providing modern and innovative solutions for all your web development problems.'
+					className='text-lg sm:text-xl xl:w-2/3 w-full sm:w-5/6 lg:w-full md:text-2xl font-semibold text-center text-black dark:text-white'
+				/>
 				<div className='flex gap-4 items-center z-20'>
 					<button className='bg-green-500 h-12 w-36 sm:w-44 font-semibold text-base sm:text-lg text-white rounded-md hover:bg-green-400 transition-all active:scale-95'>
 						Start a Project

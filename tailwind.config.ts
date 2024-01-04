@@ -1,5 +1,20 @@
 import type { Config } from 'tailwindcss';
 
+const {
+	default: flattenColorPalette,
+} = require('tailwindcss/lib/util/flattenColorPalette');
+
+const addVariablesForColors = ({ addBase, theme }: any) => {
+	let allColors = flattenColorPalette(theme('colors'));
+	let newVars = Object.fromEntries(
+		Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+	);
+
+	addBase({
+		':root': newVars,
+	});
+};
+
 const config: Config = {
 	content: [
 		'./pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -60,7 +75,7 @@ const config: Config = {
 				title: '2.8rem',
 			},
 			maxWidth: {
-				content: '1376px',
+				content: '1378px',
 			},
 			boxShadow: {
 				side: '20px -120px 90px 4px #00BF6333, -20px -120px 90px 4px #00BF6333',
@@ -68,14 +83,21 @@ const config: Config = {
 				right: '20px 0px 40px 4px #00BF6333',
 			},
 			animation: {
+				scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
 				mouseMoveDown:
 					'moveDown 3s infinite cubic-bezier(0.4, 0, 0.2, 1)',
 				mouseScrollDown:
 					'scrollDown 3s infinite cubic-bezier(0.4, 0, 0.2, 1)',
 				fadeIn: 'fadeIn 300ms ease',
 				slideInRight: 'slideInRight 100ms linear',
+				'spin-slow-y': 'rotate-y-slow 4s linear infinite',
 			},
 			keyframes: {
+				scroll: {
+					to: {
+						transform: 'translate(calc(-50% - 0.5rem))',
+					},
+				},
 				moveDown: {
 					'0%': { top: '0' },
 					'70%': { top: '10px' },
@@ -104,10 +126,26 @@ const config: Config = {
 						opacity: 'translateX(0)',
 					},
 				},
+				'rotate-y-slow': {
+					'0%': {
+						'-webkit-transform': 'rotateY(0deg)',
+						'-moz-transform': 'rotateY(0deg)',
+						'-ms-transform': 'rotateY(0deg)',
+						'-o-transform': 'rotateY(0deg)',
+						transform: 'rotateY(0deg)',
+					},
+					'100%': {
+						'-webkit-transform': 'rotateY(360deg)',
+						'-moz-transform': 'rotateY(360deg)',
+						'-ms-transform': 'rotateY(360deg)',
+						'-o-transform': 'rotateY(360deg)',
+						transform: 'rotateY(360deg)',
+					},
+				},
 			},
 		},
 	},
 	darkMode: 'class',
-	plugins: [],
+	plugins: [require('@tailwindcss/aspect-ratio'), addVariablesForColors],
 };
 export default config;
