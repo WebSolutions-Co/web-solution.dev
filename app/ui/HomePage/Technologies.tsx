@@ -54,7 +54,7 @@ const Technologies = () => {
 							key={item.label}
 							href={item.url}
 							target='_blank'
-							className='group gap-4 flex flex-col items-center overflow-hidden rounded-md justify-center border-[1px] border-light-300 dark:border-dark-500 h-36 w-40 lg:h-44 md:w-1/4 lg:w-[23.25%] transition-colors text-center hover:border-green-500 bg-white dark:bg-dark-850'
+							className='group gap-4 flex flex-col items-center overflow-hidden rounded-md justify-center border-[1px] border-light-300 dark:border-dark-500 h-36 w-40 lg:h-44 md:w-1/4 lg:w-[23.25%] transition-colors text-center hover:border-green-500 bg-white dark:bg-dark-800'
 						>
 							<div
 								key={'icon'}

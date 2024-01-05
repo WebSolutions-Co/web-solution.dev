@@ -5,6 +5,9 @@ import { cn } from '../utils/cn';
 
 export const BackgroundBeams = ({ className }: { className?: string }) => {
 	const paths = [
+		'M-401 -165C-401 -165 -333 240 131 343C616 494 663 899 663 899',
+		'M-394 -173C-394 -173 -326 232 138 343C616 486 670 891 670 891',
+		'M-387 -181C-387 -181 -319 224 145 343C616 478 677 883 677 883',
 		'M-380 -189C-380 -189 -312 216 152 343C616 470 684 875 684 875',
 		'M-373 -197C-373 -197 -305 208 159 335C623 462 691 867 691 867',
 		'M-366 -205C-366 -205 -298 200 166 327C630 454 698 859 698 859',
@@ -55,11 +58,13 @@ export const BackgroundBeams = ({ className }: { className?: string }) => {
 		'M-51 -565C-51 -565 17 -160 481 -33C945 94 1013 499 1013 499',
 		'M-44 -573C-44 -573 24 -168 488 -41C952 86 1020 491 1020 491',
 		'M-37 -581C-37 -581 31 -176 495 -49C959 78 1027 483 1027 483',
+		'M-30 -581C-30 -581 31 -176 495 -49C959 78 1027 483 1027 483',
+		'M-23 -581C-23 -581 31 -176 495 -49C959 78 1027 483 1027 483',
 	];
 	return (
 		<div
 			className={cn(
-				'absolute  h-full w-full inset-0  [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center',
+				'absolute  min-h-screen h-[150vh] w-full inset-0  [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center',
 				className
 			)}
 		>
