@@ -18,7 +18,7 @@ const Header = () => {
 				</h1>
 				<TextGenerateEffect
 					words='Web development agency providing modern and innovative solutions for all your web development problems.'
-					className='text-lg sm:text-xl xl:w-2/3 w-full sm:w-5/6 lg:w-full md:text-2xl font-semibold text-center text-black dark:text-white'
+					className='text-lg sm:text-xl xl:w-2/3 w-full sm:w-5/6 md:w-3/4  md:text-2xl font-semibold text-center text-black dark:text-white'
 				/>
 				<div className='flex gap-4 items-center z-20'>
 					<button className='bg-green-500 h-12 w-36 sm:w-44 font-semibold text-base sm:text-lg text-white rounded-md hover:bg-green-400 transition-all active:scale-95'>

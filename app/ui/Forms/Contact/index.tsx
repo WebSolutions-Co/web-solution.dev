@@ -28,7 +28,7 @@ const ContactForm = () => {
 			id='contact'
 			className='w-full z-20 flex justify-center mt-12 bg-light-100 dark:bg-dark-700 py-20'
 		>
-			<div className='w-full flex flex-col max-w-content px-4 md:px-8 xl:px-0 gap-12 justify-center items-center'>
+			<div className='w-full flex flex-col max-w-[1100px] px-4 md:px-8 xl:px-0 gap-12 justify-center items-center'>
 				<div className='text-center gap-2 flex flex-col'>
 					<h3 className='text-3xl font-semibold'>
 						Drop us an <span className='text-green-500'>Email</span>
