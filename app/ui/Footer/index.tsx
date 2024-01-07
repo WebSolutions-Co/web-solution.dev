@@ -17,7 +17,7 @@ const Footer = () => {
 				isDark
 					? 'dark bg-dark-850 text-white border-dark-600'
 					: 'bg-white text-black border-light-300'
-			} px-4 py-12 w-full bg-transparent border-t-[1px] z-20`}
+			} px-4 py-12 w-full border-t-[1px] z-20`}
 		>
 			<div
 				className={`md:mx-auto w-full gap-10 items-center flex-col flex md:flex-row justify-between max-w-full lg:max-w-[768px] xl:max-w-content `}

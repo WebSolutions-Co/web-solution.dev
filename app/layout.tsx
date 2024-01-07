@@ -26,7 +26,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
 				<body
 					className={`${inter.className} min-h-screen overflow-x-hidden`}
 				>
-					<BackgroundBeams />
+					{/* <BackgroundBeams /> */}
 					<Navigation />
 					{children}
 				</body>

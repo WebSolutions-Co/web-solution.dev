@@ -19,7 +19,7 @@ const MobileNavigation = () => {
 	return (
 		<div
 			className={`${
-				isDark ? 'dark dark-theme bg-darkBg' : 'light-theme bg-white'
+				isDark ? 'dark dark-theme bg-black' : 'light-theme bg-white'
 			} lg:hidden `}
 		>
 			<div className='px-4 py-4'>
