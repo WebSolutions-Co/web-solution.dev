@@ -38,14 +38,14 @@ export const TracingBeam = ({
 	}, []);
 
 	const y1 = useSpring(
-		useTransform(scrollYProgress, [0, 0.8], [50, svgHeight - velo * 100]),
+		useTransform(scrollYProgress, [0, 0.8], [50, svgHeight - velo * 200]),
 		{
 			stiffness: 700,
 			damping: 100,
 		}
 	);
 	const y2 = useSpring(
-		useTransform(scrollYProgress, [0, 1], [50, svgHeight - velo * 500]),
+		useTransform(scrollYProgress, [0, 1], [50, svgHeight - velo * 600]),
 		{
 			stiffness: 700,
 			damping: 100,
@@ -59,7 +59,7 @@ export const TracingBeam = ({
 				className
 			)}
 		>
-			<div className='absolute hidden lg:block left-0 top-3'>
+			<div className='absolute hidden ml-4 xl:ml-0 lg:block left-0 top-3'>
 				<motion.div
 					transition={{
 						duration: 0.2,
@@ -104,7 +104,7 @@ export const TracingBeam = ({
 						} l -18 24V ${svgHeight}`}
 						fill='none'
 						stroke='#9091A0'
-						strokeOpacity='0.16'
+						strokeOpacity='0.3'
 						transition={{
 							duration: 10,
 						}}

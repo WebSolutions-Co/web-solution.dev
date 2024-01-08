@@ -14,11 +14,13 @@ const Home = () => {
 	return (
 		<main
 			className={`${
-				isDark ? 'dark-theme dark bg-dot-white/15' : 'light-theme'
+				isDark
+					? 'dark-theme dark bg-dot-white/15'
+					: 'light-theme bg-dot-black/20'
 			} min-h-screen w-full flex flex-col items-center lg:items-start overflow-hidden pt-12 lg:pt-48`}
 		>
 			<TracingBeam className='px-4 lg:pl-16'>
-				<div className='w-full flex flex-col gap-32 pb-32'>
+				<div className='w-full flex flex-col gap-16 md:gap-24 lg:gap-32 pb-32'>
 					<Header />
 					<Details />
 					<Feedback />

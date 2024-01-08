@@ -1,24 +1,30 @@
 import React from 'react';
-import Image from 'next/image';
-import LottieAnimation from '../animations/LottieAnimation';
-import FallbackImage from '@/public/animation-fallbacks/preview-header.svg';
 import { TextGenerateEffect } from '../text-generate-effect';
+import { useRouter } from 'next/navigation';
 
 const Header = () => {
+	const router = useRouter();
+
 	return (
 		<div className='w-full max-w-content flex h-auto flex-col items-center lg:items-start relative '>
 			<div className='flex flex-col gap-4 items-center lg:items-start text-center lg:text-left'>
-				<h1 className='text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tighter leading-[3rem] sm:leading-[4rem] lg:leading-[6.5rem] text-gray-800 dark:text-emerald-50'>
-					Lifting Standards of
+				<h1 className='text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tighter leading-[3.25rem] sm:leading-[5rem] lg:leading-[6.5rem] text-gray-800 dark:text-emerald-50'>
+					Lifting <span className='sm:hidden inline'>Your</span>
+					<span className='hidden sm:inline'>Standards of</span>
 					<br />
 					<span className='text-green-500'>Web Development</span>
+					<br className='sm:hidden inline' />
+					<span className='sm:hidden inline'>Standards</span>
 				</h1>
 				<TextGenerateEffect
 					words='Web development agency providing modern and innovative solutions for all your web development problems.'
-					className='text-lg sm:text-xl xl:w-2/3 w-full sm:w-5/6 md:w-3/4  md:text-2xl font-semibold text-black dark:text-white'
+					className='text-lg sm:text-xl xl:w-2/3 w-full sm:w-5/6 md:w-3/4 md:text-2xl font-semibold text-black dark:text-white'
 				/>
 				<div className='flex mt-4 gap-4 items-center z-20'>
-					<button className='bg-green-500 h-12 w-36 sm:w-44 font-semibold text-base sm:text-lg text-white rounded-md hover:bg-green-400 transition-all active:scale-95'>
+					<button
+						onClick={() => router.push('#contact')}
+						className='bg-green-500 h-12 w-36 sm:w-44 font-semibold text-base sm:text-lg text-white rounded-md hover:bg-green-400 transition-all active:scale-95'
+					>
 						Start a Project
 					</button>
 					<button className='bg-gray-700 dark:bg-dark-600 h-12 w-36 sm:w-44 text-base font-semibold dark:border-2 dark:border-dark-500 sm:text-lg text-white  rounded-md transition-all active:scale-95 hover:bg-dark-500'>

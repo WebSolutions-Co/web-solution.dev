@@ -1,14 +1,13 @@
 import React from 'react';
-import Image from 'next/image';
 import { BentoGrid, BentoGridItem } from '../bento-grid';
-import LottieAnimation from '../animations/LottieAnimation';
-import FallbackImageHire from '@/public/animation-fallbacks/preview-hire.svg';
-import FallbackImageBuild from '@/public/animation-fallbacks/preview-build.svg';
 import Technologies from './Technologies';
+import Build from './components/Build';
+import Hire from './components/Hire';
+import ProgressiveApps from './components/ProgressiveApps';
 
 const Details = () => {
 	return (
-		<BentoGrid className='max-w-4xl md:auto-rows-[20rem]'>
+		<BentoGrid className='max-w-5xl md:auto-rows-[20rem]'>
 			{items.map((item, i) => (
 				<BentoGridItem
 					key={i}
@@ -37,48 +36,22 @@ const items = [
 	{
 		title: 'Progressive Web Apps (PWA)',
 		description:
-			'Transform your web app in a mobile app in just a few clicks.',
-		header: (
-			<div className='w-full -translate-x-3 py-3 lg:scale-125'>
-				<LottieAnimation
-					animation='https://lottie.host/c7e9fccd-20dc-4ebc-8754-45895daeae1f/0AEQqDxnLx.json'
-					fallback={
-						<Image
-							src={FallbackImageBuild}
-							alt='Animation fallback image'
-							className='h-full w-full'
-						/>
-					}
-				/>
-			</div>
-		),
+			'Transform your web applications into mobile applications in just a few clicks.',
+		header: <ProgressiveApps />,
 		className: 'md:col-span-1',
 	},
 	{
 		title: 'Hire Competitive Work Force',
 		description:
-			"We go through pain and trouble of finding only the best of the best, so that you don't need to.",
-		header: (
-			<div className='mx-auto w-3/4 scale-110 overflow-hidden'>
-				<LottieAnimation
-					animation='https://lottie.host/eed96207-4b58-4c76-ab96-0a168bea9197/j1digfdFeh.json'
-					fallback={
-						<Image
-							src={FallbackImageHire}
-							alt='Animation fallback image'
-							className='h-full w-full'
-						/>
-					}
-				/>
-			</div>
-		),
+			'We help you build or scale an expert team of innovative developers for your company.',
+		header: <Hire />,
 		className: 'md:col-span-1',
 	},
 	{
-		title: 'The Power of Communication',
+		title: 'Build projects quickly and effectively',
 		description:
-			'Understand the impact of effective communication in our lives.',
-		header: <Skeleton />,
+			'How do we approach the process? We first frame the issue, design prototypes to find out what customers want, and then build a perfect application with information we have collected',
+		header: <Build />,
 		className: 'md:col-span-2',
 	},
 ];

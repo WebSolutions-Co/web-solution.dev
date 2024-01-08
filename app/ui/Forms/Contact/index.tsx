@@ -10,6 +10,7 @@ import {
 	setContactSubject,
 } from '@/app/state/reducers/contact';
 import TextArea from '../../Inputs/TextArea';
+import SubHeading from '../../sub-heading';
 
 const ContactForm = () => {
 	const {
@@ -28,14 +29,18 @@ const ContactForm = () => {
 			id='contact'
 			className='w-full z-20 flex justify-center lg:justify-start'
 		>
-			<div className='w-full flex flex-col max-w-[1100px] px-4 md:px-8 xl:px-0 gap-12 items-center lg:items-start'>
+			<div className='w-full flex flex-col max-w-[1100px] md:px-8 xl:px-0 gap-12 items-center lg:items-start'>
 				<div className='text-center lg:text-left gap-2 flex flex-col'>
-					<h3 className='text-3xl font-semibold'>
+					<SubHeading>
 						Drop us an <span className='text-green-500'>Email</span>
-					</h3>
-					<p>
-						Got any problems that need solving? Shoot us an email
-						and we&apos;ll assist you!
+					</SubHeading>
+					<p className='text-lg'>
+						Need help turning your amazing project idea into
+						reality?
+						<br />
+						Cannot find competitive developers to scale your team?
+						<br />
+						Shoot us an email and we&apos;ll assist you!
 					</p>
 				</div>
 				<div className='w-full lg:w-full  gap-12 items-center flex flex-col'>

@@ -15,7 +15,7 @@ const Footer = () => {
 		<div
 			className={`${
 				isDark
-					? 'dark bg-dark-850 text-white border-dark-600'
+					? 'dark bg-black text-white border-dark-600'
 					: 'bg-white text-black border-light-300'
 			} px-4 py-12 w-full border-t-[1px] z-20`}
 		>

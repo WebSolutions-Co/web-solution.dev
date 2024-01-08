@@ -1,7 +1,8 @@
 'use client';
 
-import React, { ReactNode, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { cn } from '../utils/cn';
+import { MovingIconType } from '../types/ui';
 
 export const InfiniteMovingIcons = ({
 	items,
@@ -10,11 +11,7 @@ export const InfiniteMovingIcons = ({
 	pauseOnHover = true,
 	className,
 }: {
-	items: {
-		label: string;
-		url: string;
-		icon: ReactNode;
-	}[];
+	items: MovingIconType[];
 	direction?: 'left' | 'right';
 	speed?: 'fast' | 'normal' | 'slow';
 	pauseOnHover?: boolean;
@@ -101,7 +98,11 @@ export const InfiniteMovingIcons = ({
 			>
 				{items.map((item) => (
 					<li
-						className={`bg-transparent block relative text-green-500 after:-top-1 after:left-0 after:text-white after:absolute after:content-[${item.label}]`}
+						className={`bg-transparent block relative text-dark-600 dark:text-light-100
+						} after:-top-1 after:left-0 after:text-white after:absolute after:content-[${item.label}]`}
+						style={{
+							color: item.color,
+						}}
 						key={item.label}
 					>
 						<a

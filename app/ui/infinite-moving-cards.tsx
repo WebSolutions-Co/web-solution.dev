@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { cn } from '../utils/cn';
 import Image from 'next/image';
-import { StaticImport } from 'next/dist/shared/lib/get-img-props';
+import { FeedbackCardsItemType } from '../types/ui';
 
 export const InfiniteMovingCards = ({
 	items,
@@ -12,12 +12,7 @@ export const InfiniteMovingCards = ({
 	pauseOnHover = true,
 	className,
 }: {
-	items: {
-		quote: string;
-		name: string;
-		title: string;
-		image?: string | StaticImport;
-	}[];
+	items: FeedbackCardsItemType[];
 	direction?: 'left' | 'right';
 	speed?: 'fast' | 'normal' | 'slow';
 	pauseOnHover?: boolean;
@@ -90,7 +85,7 @@ export const InfiniteMovingCards = ({
 		<div
 			ref={containerRef}
 			className={cn(
-				'scroller relative z-20  max-w-full px-4 overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
+				'scroller relative z-20 max-w-content px-4 overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
 				className
 			)}
 		>
@@ -104,16 +99,16 @@ export const InfiniteMovingCards = ({
 			>
 				{items.map((item) => (
 					<li
-						className='w-[350px] max-w-full relative bg-dark-800 rounded-2xl border flex-shrink-0 border-dark-700 p-6 md:w-[450px]'
+						className='w-[350px] max-w-full relative dark:bg-black bg-white rounded-2xl border flex-shrink-0 border-ligh-400 dark:border-dark-700 p-6 md:w-[450px]'
 						key={item.name}
 					>
 						<blockquote>
 							<div className='relative z-20 flex flex-row justify-between items-center'>
 								<span className='flex flex-col gap-1'>
-									<span className='text-sm leading-[1.6] text-light-400 font-normal'>
+									<span className='text-sm leading-[1.6] dark:text-light-500 text-dark-300 font-normal'>
 										{item.name}
 									</span>
-									<span className='text-sm leading-[1.6] text-light-400 font-normal'>
+									<span className='text-sm leading-[1.6] dark:text-light-500 text-dark-300 font-normal'>
 										{item.title}
 									</span>
 								</span>
@@ -124,7 +119,7 @@ export const InfiniteMovingCards = ({
 									/>
 								)}
 							</div>
-							<div className='mt-2 relative z-20 text-sm leading-[1.6] text-gray-100 font-normal'>
+							<div className='mt-2 relative z-20 text-sm leading-[1.6] dark:text-gray-100 text-black font-normal'>
 								{item.quote}
 							</div>
 						</blockquote>

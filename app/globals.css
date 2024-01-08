@@ -55,7 +55,7 @@ body {
 }
 
 main {
-	box-shadow: -90px -64px 200px 10px #00bf6333 inset;
+	box-shadow: -90px -60px 60px 1px #00bf6322 inset;
 
 	color: rgb(var(--foreground-rgb));
 	background: linear-gradient(
@@ -64,6 +64,12 @@ main {
 			rgb(var(--background-end-rgb))
 		)
 		rgb(var(--background-start-rgb));
+}
+
+@media screen and (max-width: 1024px) {
+	main {
+		box-shadow: none;
+	}
 }
 
 .desktop-navigation {
