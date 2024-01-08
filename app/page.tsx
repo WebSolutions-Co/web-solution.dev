@@ -1,11 +1,11 @@
 'use client';
 
 import useTheme from './hooks/useTheme';
-import Footer from './ui/footer';
-import ContactForm from './ui/forms/contact';
-import Details from './ui/home-page/Details';
-import Feedback from './ui/home-page/Feedback';
-import Header from './ui/home-page/Header';
+import Footer from './ui/Footer';
+import ContactForm from './ui/Forms/Contact';
+import Details from './ui/HomePage/Details';
+import Feedback from './ui/HomePage/Feedback';
+import Header from './ui/HomePage/Header';
 import { TracingBeam } from './ui/tracing-beam';
 
 const Home = () => {

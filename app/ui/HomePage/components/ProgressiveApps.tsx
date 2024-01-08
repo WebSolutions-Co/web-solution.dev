@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import LottieAnimation from '../../animations/LottieAnimation';
+import LottieAnimation from '../../Animations/LottieAnimation';
 import FallbackImage from '@/public/animation-fallbacks/preview-build.svg';
 
 const ProgressiveApps = () => {

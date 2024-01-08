@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from '../../inputs';
+import Input from '../../Inputs';
 import useContactInfo from './hooks/useContactInfo';
 import {
 	setContactCompanyName,
@@ -9,7 +9,7 @@ import {
 	setContactPhoneNumber,
 	setContactSubject,
 } from '@/app/state/reducers/contact';
-import TextArea from '../../inputs/TextArea';
+import TextArea from '../../Inputs/TextArea';
 import SubHeading from '../../sub-heading';
 
 const ContactForm = () => {
