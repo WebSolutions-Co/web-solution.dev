@@ -1,11 +1,11 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Navigation from './ui/Navigation';
+import Navigation from './ui/navigation-bar';
 import RootProviders from './ui/root-providers';
 
 import './globals.css';
-import Footer from './ui/Footer';
+import Footer from './ui/footer';
 import { BackgroundBeams } from './ui/background-beams';
 const inter = Inter({ subsets: ['latin'] });
 

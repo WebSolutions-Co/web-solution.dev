@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from '../../Inputs';
+import Input from '../../inputs';
 import useContactInfo from './hooks/useContactInfo';
 import {
 	setContactCompanyName,
@@ -9,7 +9,7 @@ import {
 	setContactPhoneNumber,
 	setContactSubject,
 } from '@/app/state/reducers/contact';
-import TextArea from '../../Inputs/TextArea';
+import TextArea from '../../inputs/TextArea';
 import SubHeading from '../../sub-heading';
 
 const ContactForm = () => {
@@ -36,9 +36,8 @@ const ContactForm = () => {
 					</SubHeading>
 					<p className='text-lg'>
 						Need help turning your amazing project idea into
-						reality?
-						<br />
-						Cannot find competitive developers to scale your team?
+						reality? Cannot find competitive developers to scale
+						your team?
 						<br />
 						Shoot us an email and we&apos;ll assist you!
 					</p>

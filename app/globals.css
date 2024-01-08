@@ -9,6 +9,7 @@
 	margin: 0;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
+	scroll-margin: 100px;
 }
 
 :root {
@@ -66,12 +67,6 @@ main {
 		rgb(var(--background-start-rgb));
 }
 
-@media screen and (max-width: 1024px) {
-	main {
-		box-shadow: none;
-	}
-}
-
 .desktop-navigation {
 	backdrop-filter: saturate(180%) blur(3px);
 }
@@ -126,12 +121,30 @@ main {
 	transform: scale(0);
 	transform-origin: top;
 	transition: transform 0ms linear 100ms, opacity 100ms linear;
+	z-index: 1000;
 }
 
-@media screen and (max-width: 1490px) {
+@media screen and (max-width: 1380px) {
 	#switch-theme::after {
 		right: 0;
 		top: 110%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	main {
+		box-shadow: none;
+	}
+	#switch-theme::after {
+		right: 120%;
+		top: 5%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	* {
+		scroll-behavior: smooth;
+		scroll-margin: 40px;
 	}
 }
 
