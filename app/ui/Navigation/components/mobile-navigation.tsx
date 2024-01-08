@@ -14,13 +14,15 @@ const MobileNavigation = () => {
 	const { isDark } = useTheme();
 
 	const navigationItemClassName =
-		'flex w-56 h-10 items-center bg-green-500 hover:bg-green-600 py-2 text-white font-semibold duration-200 transition-transform transform-gpu after:absolute after:top-0 after:-left-[40px] after:border-[20px] hover:after:border-r-green-600 hover:after:border-t-green-600 after:border-b-transparent after:border-l-transparent after:z-20 after:border-solid after:border-green-500';
+		'flex w-56 h-10 items-center bg-green-500 hover:bg-green-600 py-2 text-white font-semibold duration-200 transition-transform transform-gpu before:absolute before:top-0 before:-left-[40px] before:border-[20px] hover:before:border-r-green-600 hover:before:border-t-green-600 before:border-b-transparent before:border-l-transparent  before:border-solid before:border-green-500';
 
 	return (
 		<div
 			className={`${
-				isDark ? 'dark dark-theme bg-darkBg' : 'light-theme bg-white'
-			} lg:hidden `}
+				isDark
+					? 'dark dark-theme bg-black bg-dot-white/20'
+					: 'light-theme bg-white bg-dot-black/20'
+			} lg:hidden`}
 		>
 			<div className='px-4 py-4'>
 				<Link href={'/'}>

@@ -36,8 +36,6 @@ const useContactInfo = () => {
 			}
 			const responseData = await response.json();
 			console.log(responseData['message']);
-
-			alert('Message successfully sent');
 		} catch (err) {
 			console.error(err);
 			alert('Error, please try resubmitting the form');

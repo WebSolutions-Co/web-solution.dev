@@ -26,11 +26,11 @@ const Input: React.FC<InputProps> = ({
 				className={`w-full border-0 pb-px outline-none border-b-2 bg-transparent flex items-end focus:border-green-500 ${
 					value
 						? 'border-green-500'
-						: 'border-light-200 dark:border-dark-500 '
+						: 'border-light-400 dark:border-dark-500 '
 				}`}
 			/>
 			<p
-				className={`absolute text-light-400 dark:text-dark-200 bottom-0 left-0 ${
+				className={`absolute text-light-500 dark:text-dark-200 bottom-0 left-0 ${
 					value && 'bottom-7 text-sm'
 				} group-focus-within:bottom-7 group-focus-within:text-sm transition-all pointer-events-none`}
 			>

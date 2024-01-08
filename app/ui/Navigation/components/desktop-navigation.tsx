@@ -17,7 +17,7 @@ const DesktopNavigation = () => {
 		<div
 			className={`hidden desktop-navigation lg:flex w-full z-50 left-0 fixed top-0 p-4 ${
 				isDark
-					? 'dark dark-theme bg-darkBg bg-opacity-80 border-gray-700'
+					? 'dark dark-theme bg-black bg-opacity-80 border-dark-700'
 					: 'light-theme bg-white bg-opacity-80 border-light-300'
 			} border-b-[1px] `}
 		>

@@ -2,17 +2,16 @@
 
 import React, { useEffect, useState } from 'react';
 import { cn } from '../utils/cn';
-import Image from 'next/image';
-import { FeedbackCardsItemType } from '../types/ui';
+import { MovingIconType } from '../types/ui';
 
-export const InfiniteMovingCards = ({
+export const InfiniteMovingIcons = ({
 	items,
 	direction = 'left',
 	speed = 'fast',
 	pauseOnHover = true,
 	className,
 }: {
-	items: FeedbackCardsItemType[];
+	items: MovingIconType[];
 	direction?: 'left' | 'right';
 	speed?: 'fast' | 'normal' | 'slow';
 	pauseOnHover?: boolean;
@@ -85,44 +84,35 @@ export const InfiniteMovingCards = ({
 		<div
 			ref={containerRef}
 			className={cn(
-				'scroller relative z-20 max-w-content px-4 overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
+				'scroller relative z-20 max-w-full px-4 overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
 				className
 			)}
 		>
 			<ul
 				ref={scrollerRef}
 				className={cn(
-					' flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap',
+					' flex min-w-full shrink-0 gap-8 py-4 w-max flex-nowrap',
 					start && 'animate-scroll ',
 					pauseOnHover && 'hover:[animation-play-state:paused]'
 				)}
 			>
 				{items.map((item) => (
 					<li
-						className='w-[350px] max-w-full relative dark:bg-black bg-white rounded-2xl border flex-shrink-0 border-ligh-400 dark:border-dark-700 p-6 md:w-[450px]'
-						key={item.name}
+						className={`bg-transparent block relative text-dark-600 dark:text-light-100
+						} after:-top-1 after:left-0 after:text-white after:absolute after:content-[${item.label}]`}
+						style={{
+							color: item.color,
+						}}
+						key={item.label}
 					>
-						<blockquote>
-							<div className='relative z-20 flex flex-row justify-between items-center'>
-								<span className='flex flex-col gap-1'>
-									<span className='text-sm leading-[1.6] dark:text-light-500 text-dark-300 font-normal'>
-										{item.name}
-									</span>
-									<span className='text-sm leading-[1.6] dark:text-light-500 text-dark-300 font-normal'>
-										{item.title}
-									</span>
-								</span>
-								{item.image && (
-									<Image
-										src={item.image}
-										alt='Profile picture'
-									/>
-								)}
-							</div>
-							<div className='mt-2 relative z-20 text-sm leading-[1.6] dark:text-gray-100 text-black font-normal'>
-								{item.quote}
-							</div>
-						</blockquote>
+						<a
+							key={item.label}
+							href={item.url}
+							target='_blank'
+							className='block text-5xl'
+						>
+							{item.icon}
+						</a>
 					</li>
 				))}
 			</ul>

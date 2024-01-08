@@ -3,11 +3,10 @@
 import useTheme from './hooks/useTheme';
 import Footer from './ui/Footer';
 import ContactForm from './ui/Forms/Contact';
-import Build from './ui/HomePage/Build';
+import Details from './ui/HomePage/Details';
 import Feedback from './ui/HomePage/Feedback';
 import Header from './ui/HomePage/Header';
-import Hire from './ui/HomePage/Hire';
-import Technologies from './ui/HomePage/Technologies';
+import { TracingBeam } from './ui/tracing-beam';
 
 const Home = () => {
 	const { isDark } = useTheme();
@@ -15,17 +14,19 @@ const Home = () => {
 	return (
 		<main
 			className={`${
-				isDark ? 'dark-theme dark' : 'light-theme'
-			} min-h-screen w-full overflow-hidden flex flex-col items-center`}
+				isDark
+					? 'dark-theme dark bg-dot-white/15'
+					: 'light-theme bg-dot-black/20'
+			} min-h-screen w-full flex flex-col items-center lg:items-start overflow-hidden pt-12 lg:pt-48`}
 		>
-			<Header />
-			<div className='w-full max-w-content mt-0 px-4 xl:mt-8 gap-4 justify-center items-center flex flex-col xl:flex-row '>
-				<Build />
-				<Hire />
-			</div>
-			<Technologies />
-			<Feedback />
-			<ContactForm />
+			<TracingBeam className='px-4 lg:pl-16'>
+				<div className='w-full flex flex-col pb-16 gap-16 md:gap-24 md:pb-24 lg:gap-32 lg:pb-32'>
+					<Header />
+					<Details />
+					<Feedback />
+					<ContactForm />
+				</div>
+			</TracingBeam>
 			<Footer />
 		</main>
 	);
