@@ -36,6 +36,7 @@ const config: Config = {
 					'linear-gradient(-135deg, #191919, #191919, #191919, #191919, #00BF63)',
 			},
 			colors: {
+				error: '#FF5861',
 				green: {
 					100: '#00FFA3',
 					200: '#00EF93',

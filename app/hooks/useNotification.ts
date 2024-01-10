@@ -22,6 +22,10 @@ const useNotification = () => {
 	) => {
 		dispatch(setNotificationStatus(newStatus));
 		dispatch(setNotificationMessage(newMessage));
+
+		setTimeout(() => {
+			clearNotification();
+		}, 3000);
 	};
 
 	return {
