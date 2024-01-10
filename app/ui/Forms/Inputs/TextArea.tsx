@@ -16,7 +16,7 @@ const TextArea: React.FC<TextAreaProps> = ({
 	return (
 		<div className={`${width} group relative`}>
 			<textarea
-				value={value}
+				value={value || ''}
 				onChange={onChange}
 				placeholder={placeholder}
 				className={`w-full h-44 border-0 pb-px outline-none border-b-2 bg-transparent placeholder:text-light-500 placeholder:dark:text-dark-200  flex items-end focus:border-green-500 ${
