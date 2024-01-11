@@ -5,6 +5,7 @@ import Navigation from './ui/Navigation';
 import RootProviders from './ui/root-providers';
 
 import './globals.css';
+import NotificationBanner from './ui/NotificationBanner';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -27,6 +28,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
 				>
 					{/* <BackgroundBeams /> */}
 					<Navigation />
+					<NotificationBanner />
 					{children}
 				</body>
 			</RootProviders>

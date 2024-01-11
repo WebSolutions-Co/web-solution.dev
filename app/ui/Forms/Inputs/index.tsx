@@ -21,7 +21,7 @@ const Input: React.FC<InputProps> = ({
 		<div className={`${width} group relative`}>
 			<input
 				type={type}
-				value={value}
+				value={value || ''}
 				onChange={onChange}
 				className={`w-full border-0 pb-px outline-none border-b-2 bg-transparent flex items-end focus:border-green-500 ${
 					value

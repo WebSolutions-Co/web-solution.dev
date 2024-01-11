@@ -1,5 +1,10 @@
+import useNotification from '@/app/hooks/useNotification';
 import { useAppDispatch } from '@/app/state/hooks';
-import { selectContact, setContactName } from '@/app/state/reducers/contact';
+import {
+	clearContactForm,
+	selectContact,
+	setContactName,
+} from '@/app/state/reducers/contact';
 import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
 import { ChangeEvent, ChangeEventHandler, ReactEventHandler } from 'react';
 import { useSelector } from 'react-redux';
@@ -8,6 +13,8 @@ const useContactInfo = () => {
 	const dispatch = useAppDispatch();
 	const { name, companyName, email, phoneNumber, subject, message } =
 		useSelector(selectContact);
+
+	const { setNotification } = useNotification();
 
 	const onChange = (
 		e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -31,14 +38,18 @@ const useContactInfo = () => {
 			});
 
 			if (!response.ok) {
-				console.log('falling over');
+				setNotification(
+					'error',
+					`response status: ${response.status}, ${response.statusText}`
+				);
 				throw new Error(`response status: ${response.status}`);
 			}
 			const responseData = await response.json();
-			console.log(responseData['message']);
+			setNotification('success', responseData['message']);
+			dispatch(clearContactForm());
 		} catch (err) {
 			console.error(err);
-			alert('Error, please try resubmitting the form');
+			setNotification('error', `Oops, something went wrong. ${err}`);
 		}
 	};
 

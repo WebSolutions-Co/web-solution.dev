@@ -46,6 +46,8 @@
 
 body {
 	font-family: 'Open Sans', sans-serif;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 	color: rgb(var(--foreground-rgb));
 	background: linear-gradient(
 			to bottom,
@@ -55,10 +57,14 @@ body {
 		rgb(var(--background-start-rgb));
 }
 
+body::-webkit-scrollbar {
+	display: none;
+}
+
 main {
 	box-shadow: -90px -60px 60px 1px #00bf6322 inset;
-
 	color: rgb(var(--foreground-rgb));
+
 	background: linear-gradient(
 			to bottom,
 			transparent,
