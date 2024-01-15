@@ -36,7 +36,6 @@
 		"typescript": "^5"
 	},
 	"description": "Ambitious software company providing modern and innovative solutions for all your web development needs.",
-	"main": "index.js",
 	"repository": "https://github.com/WebSolutions-Co/web-solution.dev.git",
 	"author": "encryptedDegen <encrypted@koyo.finance>",
 	"license": "MIT"
