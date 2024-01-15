@@ -17,11 +17,12 @@
 		"framer-motion": "^10.17.6",
 		"mini-svg-data-uri": "^1.4.4",
 		"next": "14.0.4",
-		"nodemailer": "^6.9.7",
+		"nodemailer": "^6.9.8",
 		"react": "^18",
 		"react-dom": "^18",
 		"react-icons": "^4.12.0",
 		"react-redux": "^9.0.4",
+		"stream": "^0.0.2",
 		"tailwind-merge": "^2.2.0"
 	},
 	"devDependencies": {
