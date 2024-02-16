@@ -8,7 +8,7 @@ const Contact = () => {
 	return (
 		<div
 			id='contact'
-			className='w-full max-w-5xl flex flex-col gap-8 xl:px-0'
+			className='w-full max-w-5xl flex items-center lg:items-start flex-col gap-8 xl:px-0'
 		>
 			<SubHeading>
 				Let&apos;s hop on a <span className='text-green-500'>Call</span>
