@@ -7,20 +7,17 @@ import { PopupButton, PopupWidget } from 'react-calendly';
 const Contact = () => {
 	const rootEl = document.body;
 
-	console.log(rootEl);
 	return (
-		<div className='w-full max-w-5xl flex flex-col  lg:justify-between lg:flex-row gap-12 xl:px-0'>
+		<div className='w-full max-w-5xl flex flex-col gap-8 xl:px-0'>
+			<SubHeading>
+				Let's hop on a <span className='text-green-500'>Call</span>
+			</SubHeading>
 			<div>
-				<SubHeading>
-					Let's hop on a <span className='text-green-500'>Call</span>
-				</SubHeading>
-				<div>
-					<p>Amazing project idea?</p>
-					<p>Ideas </p>
-				</div>
-				<div>
-					<p>Growing your team?</p>
-				</div>
+				<p>Amazing project idea?</p>
+				<p>Ideas </p>
+			</div>
+			<div>
+				<p>Growing your team?</p>
 			</div>
 			{rootEl && (
 				<PopupButton
@@ -30,7 +27,8 @@ const Contact = () => {
 					 * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
 					 */
 					rootElement={rootEl}
-					text='Click here to schedule!'
+					text='Schedule a 30min call with us!'
+					className='bg-green-500 max-w-72 h-10 font-semibold rounded-md'
 				/>
 			)}
 		</div>

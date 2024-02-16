@@ -20,8 +20,6 @@ const NotificationBanner = () => {
 		setIsVisible(true);
 	}, [status]);
 
-	console.log(status, isVisible);
-
 	if (!isVisible) return null;
 
 	const backgroundColor = status
