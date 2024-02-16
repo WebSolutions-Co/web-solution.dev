@@ -2,7 +2,7 @@
 
 import useTheme from './hooks/useTheme';
 import Footer from './ui/Footer';
-import ContactForm from './ui/Forms/Contact';
+import Contact from './ui/HomePage/Contact';
 import Details from './ui/HomePage/Details';
 import Feedback from './ui/HomePage/Feedback';
 import Header from './ui/HomePage/Header';
@@ -24,7 +24,7 @@ const Home = () => {
 					<Header />
 					<Details />
 					<Feedback />
-					<ContactForm />
+					<Contact />
 				</div>
 			</TracingBeam>
 			<Footer />

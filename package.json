@@ -17,8 +17,8 @@
 		"framer-motion": "^10.17.6",
 		"mini-svg-data-uri": "^1.4.4",
 		"next": "14.0.4",
-		"nodemailer": "^6.9.8",
 		"react": "^18",
+		"react-calendly": "^4.3.0",
 		"react-dom": "^18",
 		"react-icons": "^4.12.0",
 		"react-redux": "^9.0.4",
@@ -36,7 +36,6 @@
 		"tailwindcss": "^3.3.0",
 		"typescript": "^5"
 	},
-	"packageManager": "yarn@1.22.19",
 	"description": "Ambitious software company providing modern and innovative solutions for all your web development needs.",
 	"repository": "https://github.com/WebSolutions-Co/web-solution.dev.git",
 	"author": "encryptedDegen <encrypted@koyo.finance>",
