@@ -13,7 +13,7 @@ export const testimonials = [
 	},
 	{
 		id: 1,
-		quote: 'It was a pleasure working with them. The team has managed the whole project from start to the finish line, to deliver a quality product very quickly. They have respected our wishes and ideas, and they even improved them. If we ever need another digital product, we&apos;ll definitely go with them. Highly recommend!',
+		quote: 'It was a pleasure working with them. The team has managed the whole project from start to the finish line, to deliver a quality product very quickly. They have respected our wishes and ideas, and they even improved them. If we ever need another digital product, we are definitely going with them. Highly recommend!',
 		name: 'Branko Žunec',
 		title: 'BMC International',
 	},
