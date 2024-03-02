@@ -27,7 +27,10 @@ const Header = () => {
 					>
 						Start a Project
 					</button>
-					<button className='bg-gray-700 dark:bg-dark-600 h-12 w-36 sm:w-44 text-base font-semibold dark:border-2 dark:border-dark-500 sm:text-lg text-white  rounded-md transition-all active:scale-95 hover:bg-dark-500'>
+					<button
+						onClick={() => router.push('#contact')}
+						className='bg-gray-700 dark:bg-dark-600 h-12 w-36 sm:w-44 text-base font-semibold dark:border-2 dark:border-dark-500 sm:text-lg text-white  rounded-md transition-all active:scale-95 hover:bg-dark-500'
+					>
 						Hire Developers
 					</button>
 				</div>
